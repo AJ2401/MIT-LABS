@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ENDSEM</title>
+   <link rel="stylesheet" href="ENDSEM.css">
+</head>
+<body>
+<script>
+   function ageCalculator() {
+      var age = document.getElementById("adultage").value;
+
+      if (age > 25) {
+         var name = document.getElementById("name").value;
+         var source = document.getElementById("source").value;
+         var to = document.getElementById("to").value;
+         alert(
+            `${name} has booked ${tickets} from ${source} to ${destination}.`
+         );
+      } else {
+         alert("Invalid age entered");
+      }
+   }
+</script>
+<form>
+   <div class="elem-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="visitor_name" placeholder="ABHISHEK JHAWAR" pattern=[A-Z\sa-z]{3,20} required>
+   </div>
+
+   <div class="elem-group">
+      <label for="source">Source</label>
+      <input type="text" id="source" name="visitor_name" placeholder="New Delhi" pattern=[A-Z\sa-z]{3,20} required>
+   </div>
+
+   <div class="elem-group">
+      <label for="source">To</label>
+      <input type="text" id="to" name="visitor_name" placeholder="KanyaKumari" pattern=[A-Z\sa-z]{3,20} required>
+   </div>
+
+
+   <div class="elem-group">
+      <label for="email">Your E-mail</label>
+      <input type="email" id="email" name="visitor_email" placeholder="abhishek.jhawar@learner.manipal.edu" required>
+   </div>
+   <div class="elem-group">
+      <label for="phone">Your Phone</label>
+      <input type="tel" id="phone" name="visitor_phone" placeholder="+91-XXXXXXXXXX"
+         pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+   </div>
+   <hr>
+   <div class="elem-group inlined">
+      <label for="adult">Adults</label>
+      <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+   </div>
+
+   <div class="elem-group inlined">
+      <label for="adult">Adults Age </label>
+      <input type="text" id="adultage" name="adultage" placeholder="25 above " required>
+   </div>
+
+   <div class="elem-group inlined">
+      <label for="child">Children</label>
+      <input type="number" id="child" name="total_children" placeholder="2" min="0">
+   </div>
+   <div class="elem-group inlined">
+      <label for="age">Children Age </label>
+      <input type="text" id="chidrenage" name="childrenage" placeholder="11 above ">
+   </div>
+   <div class="elem-group inlined">
+      <label for="date">Date of Booking </label>
+      <input type="date" id="date" name="date" required>
+   </div>
+   <div class="elem-group">
+      <label for="selection">Select Your Preference</label>
+      <select id="selection" name="preference" required>
+         <option value="">Choose a Catergory from the List</option>
+         <option value="connecting">AC FIRST TIRE </option>
+         <option value="adjoining">AC TWO TIRE</option>
+         <option value="adjacent">AC THREE TIRE</option>
+         <option value="adjacent">SLEEPER</option>
+         <option value="adjacent">SEATING CHAIR</option>
+      </select>
+   </div>
+   <hr>
+   <a href="ENDSEM.HTML">
+   <button type="submit" onclick="ageCalculator()" >Book Your Ticket </button>
+   </a>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Click me !</title>
+    <style>
+        #testing {
+            align-self: center;
+            top: 10px;
+            margin-top: 110px;
+            padding: 60px;
+            left: 80px;
+            margin-left: 32%;
+            width: 300px;
+            position: relative;
+            border: 8px solid black
+        }
+    </style>
+</head>
+
+
+<body style="align-items: center;">
+    <div id="testing" style="background-color: ivory;">
+        <p style="font-size: large;font-size: 22px; color: blueviolet;">Click the button to get offsetTop for the test div.</p>
+        <p style="color: brown; font-size: 28px;"><button onclick="myFunction()" style="width: 80px; height: 40px;font-family: initial;font-weight: bolder;font-size: 18px;">Try it</button></p>
+        <p style="font-size: larger;font-weight: bolder; font-size: 18px;">offset is: <span id="find"></span></p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var testDiv = document.getElementById("testing");
+            document.getElementById("find").innerHTML = testDiv.offsetLeft;
+        }
+    </script>
+</body>
+
+</html>

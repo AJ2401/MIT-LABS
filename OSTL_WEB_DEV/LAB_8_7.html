@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Abhishek_Jhawar(200905144)</title>
+</head>
+<body>
+   <h2 align="center" style="font-size: 58px;font-weight: bolder;color:Black;font-family: fantasy;letter-spacing: 2px;word-spacing: 12px;">LAB - 08 Q7 </h2>
+   <div style="font-family: fantasy;font-size: 22px;border: 5px brown;color: crimson;" align="center">
+   <p align="center">Name : Abhishek Jhawar<br><br>Section : A<br> <br>Registration Number : 200905144 <br><br></p>
+   <p id="marks" align="center" style="padding-top:22px ;"></p>
+   </div>
+   <script id="marks">
+      var s1=prompt("Enter marks of MATHS III ");
+      console.log(s1);
+      var s2=prompt("Enter the marks of DSD ");
+      console.log(s2);
+      var s3=prompt("Enter the marks of COA");
+      console.log(s3);
+      var s4=prompt("Enter the marks of OOP ");
+      console.log(s4);
+      var s5=prompt("Enter the marks DSA ");
+      console.log(s5);
+      var sum=Number(s1)+Number(s2)+Number(s3)+Number(s4)+Number(s5);
+      var avg=Number(sum)/5;
+      console.log(avg);
+
+      if(avg>90)
+      {
+            document.getElementById("marks").innerHTML
+            ="Maths III  : "+s1+"<br><br>"+"Digital Design System : "+s2+"<br><br>"+"Computer Organization and Architecture : "+s3+"<br><br>"+"Object Oriented Programming : "+s4+"<br><br>"+"Data Structures "+s5+"<br><br>"+"Average  :  "+avg+"<br><br>"+"Grade Obtained  : "+"A"+"<br><br>";
+      }
+      else if(avg>80)
+      {
+         document.getElementById("marks").innerHTML
+            = "Maths III  : " + s1 + "<br><br>" + "Digital Design System : " + s2 + "<br><br>" + "Computer Organization and Architecture : " + s3 + "<br><br>" + "Object Oriented Programming : " + s4 + "<br><br>" + "Data Structures " + s5 + "<br><br>" + "Average  :  " + avg + "<br><br>" + "Grade Obtained  : " + "B" + "<br><br>";
+
+      }
+      else if(avg>70)
+      {
+         document.getElementById("marks").innerHTML
+            = "Maths III  : " + s1 + "<br><br>" + "Digital Design System : " + s2 + "<br><br>" + "Computer Organization and Architecture : " + s3 + "<br><br>" + "Object Oriented Programming : " + s4 + "<br><br>" + "Data Structures " + s5 + "<br><br>" + "Average  :  " + avg + "<br><br>" + "Grade Obtained  : " + "C" + "<br><br>";
+      }
+      else if(avg>60)
+      {
+         document.getElementById("marks").innerHTML
+            = "Maths III  : " + s1 + "<br><br>" + "Digital Design System : " + s2 + "<br><br>" + "Computer Organization and Architecture : " + s3 + "<br><br>" + "Object Oriented Programming : " + s4 + "<br><br>" + "Data Structures " + s5 + "<br><br>" + "Average  :  " + avg + "<br><br>" + "Grade Obtained  : " + "D" + "<br><br>";
+      }
+      else
+      {
+         document.getElementById("marks").innerHTML
+            = "Maths III  : " + s1 + "<br><br>" + "Digital Design System : " + s2 + "<br><br>" + "Computer Organization and Architecture : " + s3 + "<br><br>" + "Object Oriented Programming : " + s4 + "<br><br>" + "Data Structures " + s5 + "<br><br>" + "Average  :  " + avg + "<br><br>" + "Grade Obtained  : " + "E" + "<br><br>";
+
+      }
+   </script>
+</body>
+</html>

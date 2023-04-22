@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ABHISHEK_JHAWAR(200905144)</title>
+</head>
+<body style="font-weight: lighter;font-size: 28px;font-family: cursive;color: rgb(169, 116, 3);">
+   <script type="text/javascript">
+   function change()
+   {
+      var c=document.getElementById('changing');
+      if(document.getElementById('Red').checked)
+      {
+         c.style['background-color']="red";
+      }
+    else if (document.getElementById('Yellow').checked) {
+                 c.style['background-color'] = "yellow";
+              }     
+    else if (document.getElementById('Blue').checked) {
+              c.style['background-color'] = "blue";
+              }
+   }
+   </script>
+
+   <h2 style="border:8px darkblue;border-radius: 50px;letter-spacing:4px; word-spacing: 2px; font-size: 42px;font-family: fantasy;font-weight: bolder; color: crimson;"
+      align="center">LAB - 08 Q8 </h2>
+   <p style="color: darkblue; font-size: 35px;font-family: monospace;font-weight: bolder;">Choose Any One </p>
+   <input type="radio" name="Color" value="Red" onchange="change()" id="Red">Red
+   <br><br>
+   <input type="radio" name="Color" value="Yellow" onchange="change()" id="Yellow">Yellow
+   <br><br>
+   <input type="radio" name="Color" value="Blue" onchange="change()" id="Blue">Blue
+   <br><br>
+<canvas id="changing" width="350px" height="85px"></canvas>
+</body>
+</html>

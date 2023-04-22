@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ABHISHEK_JHAWAR(200905144)</title>
+</head>
+<body style="background-color: rgb(0, 0, 0); color:rgb(253, 230, 230) ;font-size: 22px;">
+
+<script type="text/javascript"> function calculate_score() { 
+   var score = 0;
+ if (document.getElementById("q13").checked) score += 1;
+ if (document.getElementById("q24").checked) score += 1; 
+ if (document.getElementById("q32").checked) score += 1; 
+  document.getElementById('result').innerHTML = " " + score; }
+</script>
+
+
+  <h2  align="center" style="font-size: 42px; font-family: 'Courier New', Courier, monospace; color: aliceblue; padding-top: 30px;font-weight: bolder;"> LAB - 08 Q10 </h2> 
+  <p>Which is a Fruit out these ? </p>
+  <input type="radio" name ="q1" id="q11">LadyFinger<br>
+ <input type="radio"  name ="q1" id="q12">Carrots<br>
+  <input type="radio"   name ="q1" id="q13">Mango<br>
+ <input type="radio"  name ="q1" id="q14">Garlic<br>
+<br><br>
+
+<p>Which is a Vegetable out of these ? </p>
+<input type="radio" name="q2"  id="q21">Banana<br>
+<input type="radio"  name="q2"id="q22">Apple<br>
+<input type="radio"  name="q2" id="q23">Mango<br>
+<input type="radio"  name="q2" id="'q24">Garlic<br>
+<br><br>
+
+<p>Which not an Electronic Device out of these ? </p>
+<input type="radio"  name="q3" id="q31">Television<br>
+<input type="radio"name="q3"  id="q32">Socks<br>
+<input type="radio" name="q3" id="q33">I Pod<br>
+<input type="radio"name="q3"   id="q34">Tablet<br>
+<br><br>
+<button onclick="calculate_score()" style="background-color: blue; height:45px;width: 98px; color: burlywood; font-size: 14px;" >Submit</button>
+<br>
+<hr>
+<b>Score Obtained :</b><span id="result"></span>
+</body>
+</html>

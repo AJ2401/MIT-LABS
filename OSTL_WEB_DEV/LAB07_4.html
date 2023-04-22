@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Football</title>
+    <script src="Lab07_4.js"></script>
+    <link rel="stylesheet" href="Lab07_4.css">
+</head>
+
+<body style="background-color: lawngreen;">
+
+
+    <div id="field" style="background-color: maroon; border-width: 8px; border:white;">
+        <img src="foot.png" width="40" height="40" id="ball">
+    </div>
+
+    <script>
+        function out(timing) {
+            return function(timeFraction) {
+                return 1 - timing(1 - timeFraction);
+            }
+        }
+
+        function bounce(timeFraction) {
+            for (let a = 0, b = 1; 1; a += b, b /= 2) {
+                if (timeFraction >= (7 - 4 * a) / 11) {
+                    return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                }
+            }
+        }
+
+        function t(timeFraction) {
+            return Math.pow(timeFraction, 2);
+        }
+
+        ball.onclick = function() {
+
+            let height = field.clientHeight - ball.clientHeight;
+            let width = 100;
+
+            animate({
+                duration: 1805,
+                timing: out(bounce),
+                draw: function(progress) {
+                    ball.style.top = height * progress + 'px'
+                }
+            });
+
+            animate({
+                duration: 1208,
+                timing: out(t),
+                draw: function(progress) {
+                    ball.style.left = width * progress + "px"
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body id="body">
+    <form action="">
+        <h1>Registration Form</h1>
+        <h2>Details</h2>
+        <h3 style="font-size:22px; font-weight: bold;">Kunal Verma (244) (Room_no - 21) </h3>
+        <p id="First_Name">Student First Name* :&nbsp;&nbsp;&nbsp;<input type="text" name="First_Name" placeholder="First Name" id="First_Name" style="background-color: rgb(49, 48, 49);border-radius: 8px" required></p>
+        <p id="Last_Name">Student Last Name* :&nbsp;&nbsp;&nbsp;<input type="text" name="Last_Name" id="Last_Name" style="background-color: rgb(49, 48, 49);border-radius: 8px;" placeholder="Last Name" required> </p>
+        <br>
+        <p style="color: black;font-weight: bold; font-family: monospace;font-size: 22px;">Gender* :</p>
+        <fieldset style="width:20%;height:3%;border-radius: 10px;text-align: center;background-color:rgb(49, 48, 49) ;" id="Gender">
+            <p>
+                Male
+                <input type="radio" name="Gender" id="Gender" required>&nbsp;&nbsp;&nbsp; Female
+                <input type="radio" name="Gender" id="Gender" required>
+            </p>
+        </fieldset>
+        <br>
+        <p style="font-size: 22px;color: black;font-weight: bold;">Institution* : </p>
+        <fieldset style="width:25%;height: 5%;;border-radius: 8px;align-self: center;text-align: center; background-color: rgb(49, 48, 49);" id="clg">
+            <p>
+                St Xaviers
+                <input type="radio" name="clg" id="clg" required> &nbsp;Kalinga
+                <input type="radio" name="clg" required> &nbsp;Hansraj
+                <input type="radio" name="clg" required> &nbsp;Hindu
+                <input type="radio" name="clg" required> &nbsp;
+            </p>
+        </fieldset>
+        <br><br>
+        <p id="Year">
+            <p style="font-weight: bold;color: black; font-size: 22px;">Current Educational Year</p>
+            <select name="Year" id="Year" style="background-color:rgb(49, 47, 49);;">
+              <option value="0">--- Select ---</option>
+              <option value="1"> First Year </option>
+              <option value="2"> Secdond Year </option>
+              <option value="3"> Third Year </option>
+              <option value="4"> Fourth Year </option>
+           </select>
+        </p>
+        <br><br>
+        <p id="Interest" style="color:black;font-weight: bold;font-family: monospace;">Specify your Interest Area<br>
+            <textarea name="Interest" id="Interest" cols="98" rows="10" style="background-color:rgb(49, 48, 49);"></textarea>
+        </p>
+        <br><br>
+        <p id="email">Enter your Learner ID* :&nbsp;&nbsp;
+            <input type="email" name="email" id="email " style="background-color:rgb(49, 47, 49);width: 395px;height:28px; font-size: 22px;" placeholder="exampe@gmail.com" required>
+        </p>
+        <br><br>
+        <p id="number">Contact Number* :
+            <input type="tel" name="number" id="number" style="background-color: rgb(49, 47, 49);font-size: 22px;" placeholder="+91 XXXXXXXXXX" required>
+        </p>
+        <br><br>
+        <div>
+            <p id="last">
+                <input type="submit" name="last" id="last">&nbsp; &nbsp; &nbsp; <input type="reset" id="last" name="last">
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>

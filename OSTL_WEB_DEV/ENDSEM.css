@@ -1,0 +1,65 @@
+body {
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: rgba(240, 240, 7, 0.767);
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+input,
+select,
+textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-family: cursive;
+  width: 100%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 3px black;
+}
+
+button {
+  height: 50px;
+  background: rgb(38, 0, 255);
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-family: "Nanum Gothic";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid black;
+}
