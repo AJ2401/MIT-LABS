@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<unistd.h>
+#include<netinet/in.h>
+
+#define port 1200
+int main() {
+    int sockfd, newsockfd, portno, clilen, n = 1;
+    char buf[256];
+    struct sockaddr_in seraddr, cliaddr;
+    int i, value;
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    seraddr.sin_family = AF_INET;
+    seraddr.sin_addr.s_addr = inet_addr("172.16.59.10");
+    seraddr.sin_port = htons(port);
+    bind(sockfd, (struct sockaddr * ) & seraddr, sizeof(seraddr));
+    listen(sockfd, 5);
+    while (1) {
+      clilen = sizeof(clilen);
+      newsockfd = accept(sockfd, (struct sockaddr * ) & cliaddr, & clilen);
+      if (fork() == 0) {
+        n = read(newsockfd, buf, sizeof(buf));
+        printf(" \nMessage from Client %s \n", buf);
+        n = write(newsockfd, buf, sizeof(buf));
+        close(newsockfd);
+        exit(0);
+      }
+      else
+close(newsockfd);
+}
+}
